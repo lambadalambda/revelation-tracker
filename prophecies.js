@@ -36,9 +36,14 @@ const PROPHECIES = [
                 date: '2022',
                 title: 'Russia-Ukraine War',
                 description: 'Major European conflict returns, threatening global stability and nuclear deterrence.'
+            },
+            {
+                date: '2026',
+                title: 'Iran-Israel-US War',
+                description: 'Peace removed from the Middle East. Multi-nation conflict spanning Iran, Israel, Lebanon, and six Gulf states. Civilian casualties in Dubai, Bahrain, Saudi Arabia from missile debris and drone strikes. First hereditary succession in Iran under wartime pressure.'
             }
         ],
-        confidence: 94,
+        confidence: 96,
         category: 'seal'
     },
     {
@@ -57,9 +62,14 @@ const PROPHECIES = [
                 date: '2022-2023',
                 title: 'Global Food Crisis',
                 description: 'Wheat shortages from Ukraine conflict cause famine risk across developing nations.'
+            },
+            {
+                date: '2026',
+                title: 'Oil Crisis — $114/barrel',
+                description: '"A measure of wheat for a penny" — oil surges 68% in one month as Iran war suspends ~1/5 of global crude supply. Bahrain refinery ablaze, force majeure declared on oil shipments. Economic scorching ripples worldwide.'
             }
         ],
-        confidence: 68,
+        confidence: 78,
         category: 'seal'
     },
     {
@@ -234,9 +244,14 @@ const PROPHECIES = [
                 date: '2014-Present',
                 title: 'Syrian Civil War',
                 description: 'Euphrates region conflict with massive casualties and international involvement.'
+            },
+            {
+                date: '2026',
+                title: 'Iran-Israel-US War',
+                description: 'Multi-nation war erupts across the Euphrates region. Iran strikes Israel directly with ballistic missiles. 1,230+ killed in Iran, 397 in Lebanon. Six Gulf states hit — UAE, Bahrain, Saudi Arabia, Kuwait, Qatar, Jordan. Oil surpasses $114/barrel. "Prepared for an hour, and a day" — conflict escalated from assassination to regional war in days.'
             }
         ],
-        confidence: 44,
+        confidence: 62,
         category: 'trumpet'
     },
     {
@@ -306,9 +321,14 @@ const PROPHECIES = [
                 date: '2023',
                 title: 'Hottest Year on Record',
                 description: 'Global temperatures break all records. Unprecedented heat waves worldwide.'
+            },
+            {
+                date: '2026',
+                title: 'Energy Scorching — Oil at $114',
+                description: '"Scorched with great heat" — 1/5 of global crude supply suspended. Bahrain refinery ablaze. Japan opposition calls for nuclear plant restart. Trump calls oil spike "small price to pay." The fire that scorches is not just temperature but the energy that powers civilization.'
             }
         ],
-        confidence: 67,
+        confidence: 72,
         category: 'bowl'
     },
     {
@@ -337,9 +357,14 @@ const PROPHECIES = [
                 date: '2023',
                 title: 'China Belt and Road',
                 description: '"Kings of the east" - China expanding influence westward through infrastructure projects.'
+            },
+            {
+                date: '2026',
+                title: 'China-Iran Missile Fuel Shipments',
+                description: '"Way of the kings of the east prepared" — WaPo investigation reveals Iranian ships left Chinese port carrying sodium perchlorate (missile fuel). Beijing complicity in arming Iran while maintaining GCC economic ties. Eastern power enabling Western destruction.'
             }
         ],
-        confidence: 58,
+        confidence: 66,
         category: 'bowl'
     },
     {
@@ -379,9 +404,14 @@ const PROPHECIES = [
                 date: '2024',
                 title: 'Rise of Authoritarian Powers',
                 description: 'China, Russia, and Iran forming anti-Western alliance. Seven heads and ten horns interpreted as coalition.'
+            },
+            {
+                date: '2026',
+                title: 'Axis Solidifies Under Fire',
+                description: 'Russia sharing intelligence with Iran to help hit US targets. China supplying missile fuel (sodium perchlorate) via port shipments. Hezbollah enters war from Lebanon. Houthis welcome new Iranian supreme leader. Multi-headed beast with each head acting independently but serving one purpose.'
             }
         ],
-        confidence: 36,
+        confidence: 48,
         category: 'sign'
     },
     {
@@ -415,9 +445,14 @@ const PROPHECIES = [
                 date: '2024',
                 title: 'Neuralink Brain Implants',
                 description: 'Technology emerging for brain-computer interfaces in human trials.'
+            },
+            {
+                date: '2026',
+                title: 'GENIUS Act Stablecoin Regulation',
+                description: '"No man might buy or sell" — US Senate advances framework for regulated digital dollars. Government oversight of all stablecoin transactions. Combined with wartime capital controls and frozen flight routes, the infrastructure for controlled commerce accelerates.'
             }
         ],
-        confidence: 74,
+        confidence: 77,
         category: 'sign'
     },
     {
@@ -487,9 +522,15 @@ const PROPHECIES = [
         reference: 'Revelation 16:16',
         title: 'Armageddon',
         description: 'And he gathered them together into a place called in the Hebrew tongue Armageddon.',
-        status: 'pending',
-        matchedEvents: [],
-        confidence: 0,
+        status: 'disputed',
+        matchedEvents: [
+            {
+                date: '2026',
+                title: 'US-Israel Discuss Ground Forces in Iran',
+                description: '"Gathered them together" — US and Israel actively discussing deploying forces to secure Iran\'s nuclear program. Mossad monitoring enriched uranium movement. If ground invasion proceeds, forces would gather across the region in the largest Western military deployment to the Middle East since 2003.'
+            }
+        ],
+        confidence: 18,
         category: 'other'
     },
     {

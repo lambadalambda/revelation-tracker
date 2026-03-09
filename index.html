@@ -779,6 +779,96 @@
         .hidden {
             display: none !important;
         }
+
+        .recent-updates {
+            padding: 50px 0;
+            border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+        }
+
+        .updates-feed {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .update-item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 20px;
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(139, 92, 246, 0.08);
+            transition: var(--transition-smooth);
+        }
+
+        .update-item:last-child {
+            border-bottom: none;
+        }
+
+        .update-item:hover {
+            background: rgba(139, 92, 246, 0.05);
+            margin: 0 -15px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-radius: 8px;
+        }
+
+        .update-date {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            padding-top: 3px;
+            white-space: nowrap;
+        }
+
+        .update-content {
+            min-width: 0;
+        }
+
+        .update-prophecy {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .update-prophecy a {
+            color: var(--purple-light);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .update-prophecy a:hover {
+            text-decoration: underline;
+        }
+
+        .update-title {
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+
+        .update-detail {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .update-delta {
+            display: inline-block;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 100px;
+            margin-left: 8px;
+            font-weight: 600;
+        }
+
+        .update-delta.up {
+            background: rgba(248, 113, 113, 0.15);
+            color: var(--red-light);
+        }
+
+        .update-delta.new {
+            background: rgba(251, 191, 36, 0.15);
+            color: var(--gold-light);
+        }
     </style>
 </head>
 <body>
@@ -793,6 +883,7 @@
                 </div>
                 <nav class="nav-links">
                     <a href="#progress">Progress</a>
+                    <a href="#updates">Updates</a>
                     <a href="#stats">Statistics</a>
                     <a href="#timeline">Timeline</a>
                 </nav>
@@ -824,6 +915,14 @@
                 </div>
                 
                 <p class="tagline serif">"The time is at hand." — Revelation 1:3</p>
+            </div>
+        </section>
+
+        <section class="recent-updates" id="updates">
+            <div class="container">
+                <h2 class="section-title">Recent <span>Updates</span></h2>
+                <div class="updates-feed" id="updates-feed">
+                </div>
             </div>
         </section>
 
@@ -1074,8 +1173,120 @@
                 document.getElementById('last-updated').textContent = formatted;
             }
 
+            function renderUpdates() {
+                const updates = [
+                    {
+                        date: 'Mar 9, 2026',
+                        prophecyId: 'other-4',
+                        prophecyTitle: 'Armageddon',
+                        title: 'US-Israel discuss ground forces in Iran',
+                        detail: 'Mossad monitoring enriched uranium movement. Largest potential Western deployment to Middle East since 2003.',
+                        delta: '+18%',
+                        deltaType: 'new'
+                    },
+                    {
+                        date: 'Mar 9, 2026',
+                        prophecyId: 'trumpet-6',
+                        prophecyTitle: 'Sixth Trumpet',
+                        title: 'Iran fires first missiles directly at Israel',
+                        detail: 'Khorramshahr + Fattah ballistic missiles hit Israeli soil. Third major Euphrates-region war in 23 years.',
+                        delta: '+18%',
+                        deltaType: 'up'
+                    },
+                    {
+                        date: 'Mar 9, 2026',
+                        prophecyId: 'sign-2',
+                        prophecyTitle: 'Great Red Dragon',
+                        title: 'Russia-China-Iran axis solidifies under fire',
+                        detail: 'Russia sharing intelligence with Iran. China supplying missile fuel. Hezbollah enters war. Houthis pledge allegiance to new supreme leader.',
+                        delta: '+12%',
+                        deltaType: 'up'
+                    },
+                    {
+                        date: 'Mar 9, 2026',
+                        prophecyId: 'seal-3',
+                        prophecyTitle: 'Third Seal',
+                        title: 'Oil surpasses $114/barrel — Bahrain refinery ablaze',
+                        detail: '1/5 of global crude supply suspended. Force majeure declared on Bahrain oil shipments. +68% in one month.',
+                        delta: '+10%',
+                        deltaType: 'up'
+                    },
+                    {
+                        date: 'Mar 9, 2026',
+                        prophecyId: 'bowl-6',
+                        prophecyTitle: 'Sixth Bowl',
+                        title: 'Chinese missile fuel shipments to Iran confirmed',
+                        detail: 'WaPo investigation: Iranian ships left Chinese port carrying sodium perchlorate. "Way of the kings of the east prepared."',
+                        delta: '+8%',
+                        deltaType: 'up'
+                    },
+                    {
+                        date: 'Mar 9, 2026',
+                        prophecyId: 'sign-4',
+                        prophecyTitle: 'Mark of the Beast',
+                        title: 'GENIUS Act advances stablecoin regulation',
+                        detail: 'US Senate framework for regulated digital dollars. Government oversight of all stablecoin transactions.',
+                        delta: '+3%',
+                        deltaType: 'up'
+                    },
+                    {
+                        date: 'Mar 9, 2026',
+                        prophecyId: 'bowl-4',
+                        prophecyTitle: 'Fourth Bowl',
+                        title: 'Energy crisis compounds climate scorching',
+                        detail: 'Japan calls for nuclear restart. Trump: oil spike is "small price to pay." Fire that scorches is energy, not just temperature.',
+                        delta: '+5%',
+                        deltaType: 'up'
+                    },
+                    {
+                        date: 'Mar 9, 2026',
+                        prophecyId: 'seal-2',
+                        prophecyTitle: 'Second Seal',
+                        title: 'Iran-Israel-US war — peace removed from Middle East',
+                        detail: 'Multi-nation conflict spanning 6+ Gulf states. Civilian casualties in Dubai, Bahrain, Saudi Arabia. First hereditary succession in Iran.',
+                        delta: '+2%',
+                        deltaType: 'up'
+                    }
+                ];
+
+                const feed = document.getElementById('updates-feed');
+                feed.innerHTML = updates.map(u => `
+                    <div class="update-item">
+                        <div class="update-date">${u.date}</div>
+                        <div class="update-content">
+                            <div class="update-prophecy">
+                                <a onclick="scrollToProphecy('${u.prophecyId}')">${u.prophecyTitle}</a>
+                                <span class="update-delta ${u.deltaType}">${u.deltaType === 'new' ? 'NEW' : ''} ${u.delta}</span>
+                            </div>
+                            <div class="update-title">${u.title}</div>
+                            <div class="update-detail">${u.detail}</div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            function scrollToProphecy(id) {
+                const card = document.querySelector('.prophecy-card[data-id="' + id + '"]');
+                if (card) {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
+                    renderTimeline('all');
+                    
+                    setTimeout(() => {
+                        const target = document.querySelector('.prophecy-card[data-id="' + id + '"]');
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            target.classList.add('expanded');
+                            target.style.borderColor = 'var(--purple-light)';
+                            setTimeout(() => { target.style.borderColor = ''; }, 3000);
+                        }
+                    }, 100);
+                }
+            }
+
             animateProgress();
             renderStats();
+            renderUpdates();
             renderTimeline();
             setLastUpdated();
         })();
