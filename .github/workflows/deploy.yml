@@ -26,6 +26,7 @@ jobs:
         run: |
           SHORT_SHA="${GITHUB_SHA::7}"
           sed -i "s/prophecies\.js/prophecies.js?v=${SHORT_SHA}/g" index.html
+          sed -i "s/swiss\.css/swiss.css?v=${SHORT_SHA}/g" index.html
           echo "Cache-busted with v=${SHORT_SHA}"
 
       - uses: actions/configure-pages@v4

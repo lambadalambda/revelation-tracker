@@ -1,0 +1,533 @@
+/* SWISS BRUTALIST THEME — Müller-Brockmann meets the Apocalypse */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+body.swiss {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f5f5;
+    --bg-tertiary: #ebebeb;
+    --bg-card: #ffffff;
+    --text-primary: #111111;
+    --text-secondary: #444444;
+    --text-muted: #888888;
+    --purple-deep: #111111;
+    --purple-mid: #cc0000;
+    --purple-light: #cc0000;
+    --purple-glow: #cc0000;
+    --red-deep: #cc0000;
+    --red-mid: #cc0000;
+    --red-light: #ff0000;
+    --gold-deep: #111111;
+    --gold-mid: #111111;
+    --gold-light: #cc0000;
+    --green-fulfilled: #111111;
+    --amber-progress: #cc0000;
+    --purple-disputed: #666666;
+    --gray-pending: #bbbbbb;
+    --font-serif: 'Space Grotesk', Helvetica, Arial, sans-serif;
+    --font-mono: 'Space Mono', 'Courier New', monospace;
+    --shadow-glow: none;
+    --shadow-card: none;
+    --transition-smooth: all 0.15s ease;
+}
+
+/* ── Kill all decorative elements ── */
+
+body.swiss #particles-container {
+    display: none !important;
+}
+
+body.swiss * {
+    border-radius: 0 !important;
+    backdrop-filter: none !important;
+    text-shadow: none !important;
+}
+
+body.swiss *::before,
+body.swiss *::after {
+    animation: none !important;
+}
+
+/* ── Typography ── */
+
+body.swiss {
+    font-family: 'Space Mono', 'Courier New', monospace;
+    background: #ffffff;
+    color: #111111;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+body.swiss .serif {
+    font-family: 'Space Grotesk', Helvetica, Arial, sans-serif;
+}
+
+body.swiss .mono {
+    font-family: 'Space Mono', 'Courier New', monospace;
+}
+
+/* ── Header ── */
+
+body.swiss header {
+    background: #111111;
+    border-bottom: 4px solid #cc0000;
+    padding: 15px 0;
+}
+
+body.swiss .logo-icon {
+    filter: none;
+    animation: none;
+}
+
+body.swiss .logo-text {
+    font-family: 'Space Grotesk', Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+body.swiss .logo-text span {
+    color: #cc0000;
+}
+
+body.swiss .nav-links a {
+    color: #999999;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    transition: all 0.15s ease;
+}
+
+body.swiss .nav-links a:hover {
+    color: #ffffff;
+    border-bottom-color: #cc0000;
+}
+
+/* ── Hero ── */
+
+body.swiss .hero {
+    padding: 60px 0 40px;
+    text-align: left;
+    border-bottom: 1px solid #111111;
+}
+
+body.swiss .hero::before {
+    display: none;
+}
+
+body.swiss .hero-title {
+    font-family: 'Space Grotesk', Helvetica, sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 0.95;
+    color: #111111;
+    margin-bottom: 10px;
+}
+
+body.swiss .hero-subtitle {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    color: #888888;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+}
+
+/* ── Progress ── */
+
+body.swiss .progress-container {
+    max-width: 100%;
+    text-align: left;
+}
+
+body.swiss .progress-percentage {
+    font-family: 'Space Grotesk', Helvetica, sans-serif;
+    font-size: 8rem;
+    font-weight: 700;
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: #cc0000;
+    background-clip: unset;
+    color: #cc0000;
+    animation: none;
+    filter: none;
+    line-height: 1;
+}
+
+body.swiss .progress-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    color: #888888;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+body.swiss .progress-bar-wrapper {
+    background: #ebebeb;
+    height: 8px;
+    box-shadow: none;
+}
+
+body.swiss .progress-bar {
+    background: #cc0000 !important;
+    animation: none !important;
+}
+
+body.swiss .progress-bar::after {
+    display: none;
+}
+
+body.swiss .progress-bar.low,
+body.swiss .progress-bar.medium,
+body.swiss .progress-bar.high,
+body.swiss .progress-bar.critical {
+    background: #cc0000 !important;
+    animation: none !important;
+    box-shadow: none !important;
+}
+
+body.swiss .milestone {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    color: #aaaaaa;
+}
+
+body.swiss .tagline {
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-size: 0.85rem;
+    color: #888888;
+    text-align: left;
+    border-left: 4px solid #cc0000;
+    padding-left: 15px;
+    margin-top: 30px;
+    max-width: none;
+    margin-left: 0;
+}
+
+/* ── Recent Updates ── */
+
+body.swiss .recent-updates {
+    border-bottom: 1px solid #111111;
+    padding: 40px 0;
+}
+
+body.swiss .update-item {
+    border-bottom: 1px solid #dddddd;
+    padding: 12px 0;
+}
+
+body.swiss .update-item:hover {
+    background: #f5f5f5;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+body.swiss .update-prophecy a {
+    color: #cc0000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+body.swiss .update-prophecy a:hover {
+    text-decoration: underline;
+}
+
+body.swiss .update-delta.up {
+    background: #cc0000;
+    color: #ffffff;
+}
+
+body.swiss .update-delta.new {
+    background: #111111;
+    color: #ffffff;
+}
+
+/* ── Stats Dashboard ── */
+
+body.swiss .stats-dashboard {
+    background: none;
+    border-bottom: 1px solid #111111;
+}
+
+body.swiss .section-title {
+    font-family: 'Space Grotesk', Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+body.swiss .section-title span {
+    color: #cc0000;
+}
+
+body.swiss .stat-card {
+    background: #ffffff;
+    border: 2px solid #111111;
+    padding: 25px;
+    transition: all 0.15s ease;
+}
+
+body.swiss .stat-card:hover {
+    border-color: #cc0000;
+    box-shadow: 6px 6px 0 #111111;
+    transform: translate(-3px, -3px);
+}
+
+body.swiss .stat-name {
+    font-family: 'Space Grotesk', Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+body.swiss .stat-value {
+    font-family: 'Space Grotesk', Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+body.swiss .stat-value.fulfilled { color: #111111; }
+body.swiss .stat-value.in_progress { color: #cc0000; }
+body.swiss .stat-value.disputed { color: #666666; }
+body.swiss .stat-value.pending { color: #cccccc; }
+
+body.swiss .stat-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+}
+
+body.swiss .stat-progress-bar {
+    background: #ebebeb;
+    height: 4px;
+}
+
+body.swiss .stat-progress-fill {
+    background: #cc0000 !important;
+}
+
+/* ── Timeline ── */
+
+body.swiss .timeline {
+    border-bottom: 1px solid #111111;
+}
+
+body.swiss .filter-btn {
+    background: #ffffff;
+    border: 2px solid #111111;
+    color: #111111;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 8px 16px;
+    transition: all 0.15s ease;
+}
+
+body.swiss .filter-btn:hover {
+    background: #111111;
+    color: #ffffff;
+}
+
+body.swiss .filter-btn.active {
+    background: #cc0000;
+    border-color: #cc0000;
+    color: #ffffff;
+}
+
+body.swiss .prophecy-card {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-left: 4px solid #111111;
+}
+
+body.swiss .prophecy-card:hover {
+    border-left-color: #cc0000;
+}
+
+body.swiss .prophecy-card.expanded {
+    border-left-color: #cc0000;
+}
+
+body.swiss .prophecy-number {
+    background: #111111;
+    color: #ffffff;
+    border: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+}
+
+body.swiss .prophecy-reference {
+    color: #cc0000;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+
+body.swiss .prophecy-title {
+    font-family: 'Space Grotesk', Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+body.swiss .prophecy-status {
+    border: 1px solid currentColor;
+    background: transparent !important;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+
+body.swiss .prophecy-status.fulfilled { color: #111111; border-color: #111111; }
+body.swiss .prophecy-status.in_progress { color: #cc0000; border-color: #cc0000; }
+body.swiss .prophecy-status.disputed { color: #666666; border-color: #666666; }
+body.swiss .prophecy-status.pending { color: #bbbbbb; border-color: #bbbbbb; }
+
+body.swiss .confidence-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    color: #111111;
+}
+
+body.swiss .prophecy-content {
+    border-top: 1px solid #dddddd;
+}
+
+body.swiss .prophecy-description {
+    font-family: 'Space Grotesk', sans-serif;
+    font-style: normal;
+    color: #444444;
+    font-size: 1rem;
+    border-bottom: 1px solid #dddddd;
+}
+
+body.swiss .event-item {
+    background: #f5f5f5;
+    border-left: 3px solid #cc0000;
+    padding: 12px 15px;
+}
+
+body.swiss .event-date {
+    color: #cc0000;
+    font-weight: 700;
+}
+
+body.swiss .events-title {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+
+/* ── Footer ── */
+
+body.swiss footer {
+    background: #111111;
+    border-top: 4px solid #cc0000;
+    color: #ffffff;
+}
+
+body.swiss .footer-title {
+    color: #cc0000;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+
+body.swiss .footer-text {
+    color: #999999;
+}
+
+body.swiss .data-sources li {
+    color: #999999;
+}
+
+body.swiss .data-sources li::before {
+    color: #cc0000;
+    content: '—';
+}
+
+body.swiss .last-updated {
+    color: #999999;
+}
+
+body.swiss .live-indicator {
+    background: #cc0000;
+    animation: none;
+}
+
+body.swiss .footer-bottom {
+    border-top-color: #333333;
+    color: #666666;
+}
+
+/* ── Theme Toggle Button ── */
+
+.theme-toggle {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 200;
+    width: 44px;
+    height: 44px;
+    border: 2px solid rgba(139, 92, 246, 0.4);
+    background: rgba(10, 10, 15, 0.9);
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+    border-color: var(--purple-light);
+    color: var(--text-primary);
+    transform: scale(1.05);
+}
+
+body.swiss .theme-toggle {
+    background: #ffffff;
+    border: 2px solid #111111;
+    color: #111111;
+    border-radius: 0;
+    backdrop-filter: none;
+}
+
+body.swiss .theme-toggle:hover {
+    background: #111111;
+    color: #ffffff;
+    border-color: #cc0000;
+    transform: none;
+    box-shadow: 3px 3px 0 #cc0000;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 768px) {
+    body.swiss .hero-title {
+        font-size: 2.8rem;
+        letter-spacing: -1px;
+    }
+
+    body.swiss .progress-percentage {
+        font-size: 5rem;
+    }
+
+    .theme-toggle {
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+    }
+}

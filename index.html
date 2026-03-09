@@ -870,8 +870,10 @@
             color: var(--gold-light);
         }
     </style>
+    <link rel="stylesheet" href="swiss.css">
 </head>
 <body>
+    <button class="theme-toggle" id="themeToggle" title="Switch theme">🇨🇭</button>
     <div id="particles-container"></div>
 
     <header>
@@ -1289,6 +1291,24 @@
             renderUpdates();
             renderTimeline();
             setLastUpdated();
+        })();
+    </script>
+    <script>
+        // Theme toggle
+        (function() {
+            const toggle = document.getElementById('themeToggle');
+            const stored = localStorage.getItem('revelation-theme');
+            if (stored === 'swiss') {
+                document.body.classList.add('swiss');
+                toggle.textContent = '🌑';
+                toggle.title = 'Switch to dark theme';
+            }
+            toggle.addEventListener('click', function() {
+                const isSwiss = document.body.classList.toggle('swiss');
+                localStorage.setItem('revelation-theme', isSwiss ? 'swiss' : 'dark');
+                toggle.textContent = isSwiss ? '🌑' : '🇨🇭';
+                toggle.title = isSwiss ? 'Switch to dark theme' : 'Switch to Swiss theme';
+            });
         })();
     </script>
 </body>
